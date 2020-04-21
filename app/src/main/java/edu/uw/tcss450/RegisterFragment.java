@@ -61,7 +61,7 @@ public class RegisterFragment extends Fragment {
         RegisterFragmentArgs args = RegisterFragmentArgs.fromBundle(getArguments());
         binding.emailView.setText(args.getEmailFromLogin());
         binding.passView.setText(args.getPasswordFromLogin());
-       // binding.passAgain.setText(args.getPasswordFromLogin());
+        // binding.passAgain.setText(args.getPasswordFromLogin());
 
 
         return (args.getEmailFromLogin().isEmpty() && args.getPasswordFromLogin().isEmpty());
