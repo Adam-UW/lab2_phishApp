@@ -15,9 +15,12 @@
             app:destination="@id/registerFragment" />
         <action
             android:id="@+id/action_loginFragment_to_successFragment"
-            app:destination="@id/successFragment"
+            app:destination="@id/navigation_home"
             app:popUpTo="@+id/loginFragment"
             app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_loginFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -26,7 +29,7 @@
         tools:layout="@layout/fragment_register" >
         <action
             android:id="@+id/action_registerFragment_to_successFragment"
-            app:destination="@id/successFragment"
+            app:destination="@id/navigation_home"
             app:popUpTo="@+id/loginFragment"
             app:popUpToInclusive="true"/>
         <argument
@@ -35,22 +38,20 @@
         <argument
             android:name="password_from_login"
             app:argType="string" />
-    </fragment>
-    <fragment
-        android:id="@+id/successFragment"
-        android:name="edu.uw.tcss450.SuccessFragment"
-        android:label="fragment_success"
-        tools:layout="@layout/fragment_success" >
         <action
-            android:id="@+id/action_successFragment_to_main"
-            app:destination="@id/nav_host_fragment"
-            app:popUpTo="@+id/loginFragment"
-            app:popUpToInclusive="true"/>
+            android:id="@+id/action_registerFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="edu.uw.tcss450.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" >
         <argument
             android:name="email"
             app:argType="string" />
         <argument
             android:name="jwt"
             app:argType="string" />
-    </fragment>
+    </activity>
 </navigation>

@@ -87,8 +87,8 @@ public class RegisterFragment extends Fragment {
             Toast.makeText(getContext(), "pass not match up", Toast.LENGTH_SHORT).show();
         }
         else{
-            RegisterFragmentDirections.ActionRegisterFragmentToSuccessFragment directions =
-                    RegisterFragmentDirections.actionRegisterFragmentToSuccessFragment(str_email, "");
+            RegisterFragmentDirections.ActionRegisterFragmentToMainActivity directions =
+                    RegisterFragmentDirections.actionRegisterFragmentToMainActivity(str_email, "");
 
             //Use the navigate method to perform the navigation.
             Navigation.findNavController(getView()).navigate(directions);
@@ -114,8 +114,8 @@ public class RegisterFragment extends Fragment {
             Toast.makeText(getContext(), "pass not match up", Toast.LENGTH_SHORT).show();
         }
         else{
-            RegisterFragmentDirections.ActionRegisterFragmentToSuccessFragment directions =
-                    RegisterFragmentDirections.actionRegisterFragmentToSuccessFragment(str, "");
+            RegisterFragmentDirections.ActionRegisterFragmentToMainActivity directions =
+                    RegisterFragmentDirections.actionRegisterFragmentToMainActivity(str, "");
 
             //Use the navigate method to perform the navigation.
             Navigation.findNavController(getView()).navigate(directions);

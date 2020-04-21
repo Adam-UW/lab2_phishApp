@@ -120,8 +120,8 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
             String str_pass = binding.passView.getText().toString();
 //        NavController navController= Navigation.findNavController(view);
 //        navController.navigate(R.id.action_loginFragment_to_registerFragment());
-            LoginFragmentDirections.ActionLoginFragmentToSuccessFragment directions =
-                    LoginFragmentDirections.actionLoginFragmentToSuccessFragment(str_email, str_pass);
+            LoginFragmentDirections.ActionLoginFragmentToMainActivity directions =
+                    LoginFragmentDirections.actionLoginFragmentToMainActivity(str_email, "");
 
             Navigation.findNavController(getView()).navigate(directions);
         }
